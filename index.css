@@ -5,7 +5,41 @@ body {
     justify-content: center;
     color: rgb(0, 0, 0);
 }
+#topo{
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    justify-content: space-between;
+}
+#topo nav{ 
+    display: flex;
+    gap: 50px;
+    position: relative;
+    top: -0.5rem;
+    align-self: center;
+    margin-right: 2rem;
+    font-size: 2rem;
+}
+#topo a{
+    text-decoration: none;
+    color: black; 
+    font-size: 2rem;
+}
 
+#topo a:hover{
+    color: red;
+}
+
+    #topo a:active{
+
+        color: chartreuse;
+    }
+
+.logo{
+    width: 8rem;
+    height: 8rem;
+
+}
 main{
     height: 100%;
     width: 100%; 
@@ -16,7 +50,8 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    position: relative;
+    top: -1.5rem;
     height: 100%;
 }
 
@@ -75,7 +110,7 @@ h2:hover {
   #mensagem{
    background-color: white;
    color: #45a049;
-    top: 580px;
+    top: 530px;
     position: absolute;
     font-size: 25px;
   } 
