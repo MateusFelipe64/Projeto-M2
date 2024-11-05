@@ -8,7 +8,7 @@ body {
 #topo{
     display: flex;
     width: 100%;
-    height: 10rem;
+    height: 5rem;
     justify-content: space-between;
 }
 #topo nav{ 
@@ -27,13 +27,12 @@ body {
 }
 
 #topo a:hover{
-    color: red;
+    color: #ff0000;
 }
 
-    #topo a:active{
-
-        color: chartreuse;
-    }
+#topo a:active{
+ color: chartreuse;
+}
 
 .logo{
     width: 8rem;
@@ -88,29 +87,29 @@ button{
     margin-top: 10px;
     font-size: 20px;
     cursor: pointer;
-    background-color: rgba(199, 16, 16, 0.87);
+    background-color: #ff0000;
     color: white;
     transition: color 0.3s
 }
 
 button:hover {
     color: black;
-    background-color: #45a049; /* Cor de fundo quando o mouse está sobre o botão */
+    background-color: #0ce217;
   }
 
-h2 {
+h2{
     font-size: 50px;
     transition: color 0.3s
 }
  
 h2:hover {
-    color: red;
+    color: #ff0000;
   }
 
   #mensagem{
    background-color: white;
-   color: #45a049;
-    top: 530px;
+   color: #0ce217;
+    top: 650px;
     position: absolute;
     font-size: 25px;
   } 

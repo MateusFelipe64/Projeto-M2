@@ -1,0 +1,52 @@
+#resumo{
+    flex-direction: column;
+    display: flex;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    transition: 0.3s;
+
+}
+#resumo:hover{
+    color: rgb(255, 248, 248);
+    background-color: #111111f8;
+    border-radius: 15%;
+
+}
+#resumo:hover h1{
+    color: white;
+    transition: 0.3s;
+}
+#resumo span{
+    transition: 0.3s;
+}
+#resumo span:hover{
+    color: white;
+}
+#resumo h1{
+    font-size: 50px;
+}
+.c{
+    color: #ff0000;
+}
+.a{ 
+    color: #ffcc00;
+}
+.p {
+    color: #ff6100;
+}
+.s{
+    color: #006dff;
+}
+#resumo p{
+    font-size: 25px;
+    text-align: center;
+    margin: 30px;
+}
+
+footer{
+    font-size: 10px;
+}
+
+footer:hover{
+    color: #ff0000;
+}

@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+}
+#topo{
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+
+#topo nav{ 
+    display: flex;
+    gap: 50px;
+    position: relative;
+    top: -0.5rem;
+    align-self: center;
+    margin-right: 2rem;
+    font-size: 2rem;
+}
+#topo a{
+    text-decoration: none;
+    color: black; 
+    font-size: 2rem;
+}
+
+#topo a:hover{
+    color: #ff0000;
+}
+
+#topo a:active{
+
+        color: #0ce217;
+}
+.logo{
+    width: 8rem;
+    height: 8rem;
+}
