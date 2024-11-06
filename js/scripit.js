@@ -1,26 +1,43 @@
-// Seleciona o formulário e o campo de mensagem
+if (!localStorage.getItem("listaUsuarios")) {
+    localStorage.setItem("listaUsuarios", JSON.stringify([]));
+}
+
+class Usuarios {
+    constructor(nome, doença, cpf, email, senha) {
+        this.id = JSON.parse(localStorage.getItem("listaUsuarios")).length;
+        this.nome = nome;
+        this.doença = doença;
+        this.cpf = cpf;
+        this.email = email;
+        this.senha = senha;
+    }
+}
+
 const form = document.getElementById('cadastroForm');
 const mensagem = document.getElementById('mensagem');
 
-// Adiciona um ouvinte de evento para o formulário
 form.addEventListener('submit', function(event) {
-    event.preventDefault();  // Evita o envio do formulário e o recarregamento da página
+    event.preventDefault();
 
-    // Captura os valores dos campos
     const nome = document.getElementById('nome').value;
+    const doença = document.getElementById('doença').value;
+    const cpf = document.getElementById('cpf').value;
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
 
-    // Validações básicas
-    if (nome === '' || email === '' || senha === '') {
+    if (nome === '' || doença === '' || email === '' || senha === '' || cpf === '') {
         mensagem.textContent = 'Por favor, preencha todos os campos.';
         mensagem.style.color = 'red';
         return;
     }
 
-    // Exibe uma mensagem de sucesso
+    const novoUsuario = new Usuarios(nome, doença, cpf, email, senha);
+    const listaUsuario = JSON.parse(localStorage.getItem("listaUsuarios"));
+    listaUsuario.push(novoUsuario);
+
+    localStorage.setItem("listaUsuarios", JSON.stringify(listaUsuario));
+
     mensagem.textContent = 'Cadastro realizado com sucesso!';
-    // mensagem.style.color = 'green';
-    // Limpa os campos do formulário
+    mensagem.style.color = 'green';
     form.reset();
 });
